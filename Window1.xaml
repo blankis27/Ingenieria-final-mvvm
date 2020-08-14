@@ -1,0 +1,21 @@
+﻿<Window x:Class="MVVMInmobiliaria.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="clr-namespace:MVVMInmobiliaria.Views"        
+    Title="MVVMInmobiliaria" Height="650" Width="700" MinHeight="550"
+    WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush 
+                ImageSource="Images\fondoMain.jpg" Stretch="UniformToFill">
+            </ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <vw:InmuebleDisplay Grid.Row="0"/>
+        <vw:InmuebleSelectionView Grid.Row="2"/>
+    </Grid>
+</Window>
